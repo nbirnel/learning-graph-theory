@@ -62,8 +62,6 @@ In any graph, the sum of degrees of the vertices is twice the number of edges.
 Thus, a graph of order `n` can have at most `m = n(n-1)/2` edges `m`.
 
 A vertice is *even* or *odd* according to whether it's degree is even or odd.
-Definitions and Notation
-------------------------
 
 Every graph has an even number of odd vertices.
 
