@@ -8,15 +8,70 @@ My notes and code from reading `The Fascinating World of Graph Theory`
 Chapter 1
 =========
 
-Definitions
-----------
+A *graph* `G` is a finite nonempty set `V` of objects called 
+*vertices*, *nodes*, or *points*
+together with a set `E` consisting of 2-element subsets of `V`.
+Each element of `E` is known as an *edge* (or *arc*,  or *line*).
+`G` may be written `G = (V, E)`. 
+The vertex set may be written `V(G)`,
+and the edge set `E(G)`.
 
-A *graph* `G` is a collection of *vertices*, *nodes*, or *points*; 
-and *edges*, *arcs*,  or *lines* where two vertices are joined by an edge 
-if they are related in some way.
+An edge has *orientation* if the direction of the relationship between it's
+incident vertices is meaningful.
+
+The number `n` of vertices in graph `G` is called the *order* of `G`
+and the number `m` of edges it's *size*.
 
 A *complete graph* of order `N` (represented K\ :sub:`N`\ ) is a graph of `N` 
 vertices with every two vertices joined by an edge.
 
+A graph denoted K\ :sub:`N,N` has two sets of N vertices, where each vertex in 
+one set is joined to all vertices in the other set.
 
+An edge `e = uv` of a graph *joins* the vertices `u` and `v`;
+`u` and `v` are *adjacent*, and are *neighbors* of eachother.
+`u` and `e` are *incident*, as are `v` and `e`.
 
+Two vertices which are not incident of the same edge are *non-adjacent*.
+
+Two edges which are incident of the same vertex are *adjacent edges*.
+
+If it is useful to discuss particular vertices of a graph `G`,
+`G` is known as a *labelled graph*. 
+Otherwise it is an *unlabelled graph*.
+
+A graph of exactly one vertex is a *trivial graph*.
+A graph of 2 or more vertices is a *non-trivial graph*.
+
+A graph of no edges is an *empty graph*. 
+A *nonempty graph* contains at least one edge.
+
+The *degree* deg\ :sub:`G`\ *v* (or more simple deg *v*) is the number of
+edges of vertex `v` of graph `G`.
+
+A vertex of degree 0 is an *isolated vertex*, while a vertex of degree 1 is an
+*end vertex*. A vertex in a graph of order `N` can have at most `N-1` degrees.
+
+The *minimum degree* δ(`G`) and *maximum degree* Δ(`G`) of graph `G` are the
+number of incident edges of the vertices with the least and most number of
+incident edges respectively.
+
+**First Theorem of Graph Theory** -- The *Handshaking Lemma*: 
+In any graph, the sum of degrees of the vertices is twice the number of edges.
+
+Thus, a graph of order `n` can have at most `m = n(n-1)/2` edges `m`.
+
+A vertice is *even* or *odd* according to whether it's degree is even or odd.
+Definitions and Notation
+------------------------
+
+Every graph has an even number of odd vertices.
+
+Chapter 2
+=========
+
+A graph `G` of order 2 or more is *irregular* if every two vetices of `G` have
+different degrees.
+
+**Party Friends Theorem**
+There are no irregular graphs.
