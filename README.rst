@@ -59,7 +59,7 @@ incident edges respectively.
 **First Theorem of Graph Theory** -- The *Handshaking Lemma*: 
 In any graph, the sum of degrees of the vertices is twice the number of edges.
 
-Thus, a graph of order `n` can have at most `m = n(n-1)/2` edges `m`.
+Thus, a graph of order `n` can have at most `m = n(n-1)/2` edges.
 
 A vertice is *even* or *odd* according to whether it's degree is even or odd.
 
@@ -73,3 +73,26 @@ different degrees.
 
 **Party Friends Theorem**
 There are no irregular graphs.
+
+An *almost irregular* graph has exactly one pair vertices of the same degree.
+
+The *complement* :math:`\overline{G}` of a graph `G` is the graph having the 
+same vertices as G, where any two vertices `u` and `v` of :math:`\overline{G}`
+are adjacent if an only if they are not adjacent in `G`.
+
+If `v` is a vetext in graph `G` of order `n`,
+the degree of v in :math:`\overline{G}` is equal to :math:`n - 1 - deg\  v`.
+FIXME Why?
+
+And thus two vertices `u` and `v` have the same degree in graph 
+:math:`\overline{G}` if and only if they have the same degree in graph `G`.
+
+**Two almost irregular graphs theorem**
+For each integer `n≥2`, there are exactly two almost irregular graphs of order
+`n`, and they are complements of eachother.
+
+**Theorem 2.3**
+For any set of postive integers whose largetst integer is `n`, there is a graph
+of order `n + 1`, the degrees of whose vertices are precisely those integers.
+
+
