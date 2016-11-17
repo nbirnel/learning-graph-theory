@@ -117,6 +117,9 @@ def minimax_of(graph):
     degrees = degrees_of(graph)
     return (min(degrees), max(degrees))
 
+def uniq_degrees_of(graph):
+    return set(degrees_of(graph))
+
 def complement_of(graph):
     vertices = set(graph.keys())
     return {vertex: list(vertices - set(edges)) for vertex, edges in graph.items()}
@@ -124,7 +127,7 @@ def complement_of(graph):
 def main():
     for g in [G2, H2, G3, H3, G4, H4, G5, H5, G6, H6]:
         graph = g['graph']
-        degrees_str = ', '.join([str(d) for d in minimax_of(graph)])
+        degrees_str = ', '.join([str(d) for d in uniq_degrees_of(graph)])
 
         G = pgv.AGraph(label=g['name'] + ': ' + degrees_str)
 
