@@ -16,9 +16,6 @@ Each element of `E` is known as an *edge* (or *arc*,  or *line*).
 The vertex set may be written `V(G)`,
 and the edge set `E(G)`.
 
-An edge has *orientation* if the direction of the relationship between it's
-incident vertices is meaningful.
-
 The number `n` of vertices in graph `G` is called the *order* of `G`
 and the number `m` of edges it's *size*.
 
@@ -31,6 +28,9 @@ one set is joined to all vertices in the other set.
 An edge `e = uv` of a graph *joins* the vertices `u` and `v`;
 `u` and `v` are *adjacent*, and are *neighbors* of eachother.
 `u` and `e` are *incident*, as are `v` and `e`.
+
+An edge has *orientation* if the direction of the relationship between it's
+incident vertices is meaningful.
 
 Two vertices which are not incident of the same edge are *non-adjacent*.
 
