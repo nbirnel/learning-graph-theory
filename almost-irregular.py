@@ -111,8 +111,11 @@ def add_isolated_vertex(graph):
     return copy
 
 def degrees_of(graph):
-    degrees = [len(edges) for node, edges in graph.items()]
-    return sorted(degrees)
+    return [len(edges) for node, edges in graph.items()]
+
+def minimax_of(graph):
+    degrees = degrees_of(graph)
+    return (min(degrees), max(degrees))
 
 def complement_of(graph):
     vertices = set(graph.keys())
@@ -121,8 +124,7 @@ def complement_of(graph):
 def main():
     for g in [G2, H2, G3, H3, G4, H4, G5, H5, G6, H6]:
         graph = g['graph']
-        degrees = reversed(sorted(degrees_of(graph)))
-        degrees_str = ', '.join([str(d) for d in degrees])
+        degrees_str = ', '.join([str(d) for d in minimax_of(graph)])
 
         G = pgv.AGraph(label=g['name'] + ': ' + degrees_str)
 
