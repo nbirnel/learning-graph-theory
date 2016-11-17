@@ -120,13 +120,16 @@ def complement_of(graph):
 
 def main():
     for g in [G2, H2, G3, H3, G4, H4, G5, H5, G6, H6]:
-        G = pgv.AGraph(label=g['name'])
         graph = g['graph']
-        for n in graph:
-            G.add_node(n, label=n)
-        for n in graph:
-            for e in graph[n]:
-                G.add_edge(n, e)
+        degrees = reversed(sorted(degrees_of(graph)))
+        degrees_str = ', '.join([str(d) for d in degrees])
+
+        G = pgv.AGraph(label=g['name'] + ': ' + degrees_str)
+
+        for node in graph:
+            G.add_node(node, label=node + ': δ' + str(len(graph[node])))
+            for edge in graph[node]:
+                G.add_edge(node, edge)
         G.draw(g['name'] + '.svg', prog='dot')
 
 if __name__ == '__main__':
