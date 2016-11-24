@@ -1,0 +1,63 @@
+strict graph  {
+    node [shape=circle, width=0.1, height=0.1; label=""]
+	graph [style=filled, color=white];
+    subgraph cluster_g4 {
+        label="4"
+        g4_a -- g4_b;
+        g4_a -- g4_c;
+        g4_a -- g4_d;
+        g4_a -- g4_e;
+        g4_b -- g4_c;
+        g4_b -- g4_d;
+        g4_b -- g4_e;
+        g4_c -- g4_d;
+        g4_c -- g4_e;
+        g4_d -- g4_e;
+    }
+    subgraph cluster_g3_4 {
+        label="3,4"
+        g3_4_a -- g3_4_b;
+        g3_4_a -- g3_4_c;
+        g3_4_a -- g3_4_d;
+        g3_4_b -- g3_4_c;
+        g3_4_b -- g3_4_e;
+        g3_4_c -- g3_4_d;
+        g3_4_c -- g3_4_e;
+        g3_4_d -- g3_4_e;
+    }
+    subgraph cluster_g2_4 {
+        label="2,4"
+        g2_4_a -- g2_4_b;
+        g2_4_a -- g2_4_c;
+        g2_4_a -- g2_4_e;
+        g2_4_a -- g2_4_d;
+        g2_4_b -- g2_4_d;
+        g2_4_c -- g2_4_e;
+    }
+    subgraph cluster_g1_4 {
+        label="1,4"
+        g1_4_a -- g1_4_b;
+        g1_4_a -- g1_4_c;
+        g1_4_a -- g1_4_d;
+        g1_4_a -- g1_4_e;
+    }
+    {rank = same;
+        g4_a;
+        g3_4_a, g3_4_b;
+        g2_4_a;
+        g1_4_a
+    }
+    {rank = same;
+        g4_b, g4_e;
+        g3_4_c;
+        g2_4_b, g2_4_c;
+        g2_4_b, g2_4_c
+    }
+    {rank = same;
+        g4_c, g4_d;
+        g3_4_d, g3_4_e;
+        g2_4_d, g2_4_e;
+        g2_4_d, g2_4_e
+    }
+
+}

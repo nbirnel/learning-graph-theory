@@ -1,0 +1,13 @@
+strict graph  {
+    node [shape=circle, width=0.1, height=0.1, label=""];
+	graph [label = < with <font color="red">isolated</font> and <font color="blue">end</font> vertices >];
+    a  [color=red];
+    b;
+    c  [color=blue];
+    b -- c
+    b -- d
+    d -- e
+    e -- b
+    {rank = same; a; b; c;}
+    {rank = same; d; e;}
+}

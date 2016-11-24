@@ -1,0 +1,22 @@
+strict graph  {
+    node [shape=circle, width=0.1, height=0.1, label=""]
+	graph [style=filled, color=white];
+
+    subgraph cluster_G {
+        label="G"
+        1 -- 2;
+        1 -- 4;
+        2 -- 3;
+        3 -- 4;
+        {rank = same; 1, 2};
+        {rank = same; 3, 4};
+    }
+
+    subgraph cluster_H {
+        label="H"
+        a1 -- a3;
+        a2 -- a4;
+        {rank = same; a1, a2};
+        {rank = same; a3, a4};
+    }
+}

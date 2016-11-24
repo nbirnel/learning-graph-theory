@@ -1,0 +1,20 @@
+strict graph  {
+	graph [label=UG];
+	node [label="\N"];
+	1	 [label=1];
+	2	 [label=2];
+	3	 [label=3];
+	S	 [label=S];
+	G	 [label=G];
+	E	 [label=E];
+    1 -- S;
+    1 -- G;
+    1 -- E;
+    2 -- S;
+    2 -- G;
+    2 -- E;
+    3 -- S;
+    3 -- G;
+    3 -- E;
+}
+
