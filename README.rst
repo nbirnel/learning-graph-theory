@@ -95,4 +95,5 @@ For each integer `n≥2`, there are exactly two almost irregular graphs of order
 For any set of postive integers whose largetst integer is `n`, there is a graph
 of order `n + 1`, the degrees of whose vertices are precisely those integers.
 
+.. graphviz:: K3.dot
 

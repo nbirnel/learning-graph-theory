@@ -1,6 +1,9 @@
 %.html : %.rst
 	rst2html $< > $@
 
+%.png : %.dot
+	dot -Tpng $< >$@
+
 view : 
 	see *.html
 
