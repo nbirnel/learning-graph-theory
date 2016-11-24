@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# lgt documentation build configuration file, created by
+# Learning Graph Theory documentation build configuration file, created by
 # sphinx-quickstart on Thu Nov 24 09:18:32 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -49,9 +49,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'lgt'
-copyright = '2016, Noah'
-author = 'Noah'
+project = 'Learning Graph Theory'
+copyright = '2016, Noah Birnel'
+author = 'Noah Birnel'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -134,7 +134,7 @@ html_theme = 'alabaster'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = 'lgt v0.0.1'
+# html_title = 'Learning Graph Theory v0.0.1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -260,7 +260,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'lgt.tex', 'lgt Documentation',
+    (master_doc, 'Learning Graph Theory.tex', 'Learning Graph Theory Documentation',
      'Noah', 'manual'),
 ]
 
@@ -302,7 +302,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'lgt', 'lgt Documentation',
+    (master_doc, 'Learning Graph Theory', 'Learning Graph Theory Documentation',
      [author], 1)
 ]
 
@@ -317,8 +317,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'lgt', 'lgt Documentation',
-     author, 'lgt', 'One line description of project.',
+    (master_doc, 'Learning Graph Theory', 'Learning Graph Theory Documentation',
+     author, 'Learning Graph Theory', 'One line description of project.',
      'Miscellaneous'),
 ]
 
