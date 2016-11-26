@@ -1,10 +1,10 @@
-.. lgt documentation master file, created by
-   sphinx-quickstart on Thu Nov 24 09:18:32 2016.
+.. Learning Graph Theory documentation master file, created by
+   sphinx-quickstart on Sat Nov 26 14:14:19 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to lgt's documentation!
-===============================
+Welcome to Learning Graph Theory's documentation!
+=================================================
 
 Contents:
 
