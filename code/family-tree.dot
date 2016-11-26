@@ -1,0 +1,13 @@
+ graph {
+    splines=ortho;
+    {fm_marriage, fm_offspring_l, fm_offspring, fm_offspring_r [width=0, shape=point, style=invis];}
+    {rank=same; fm_offspring_l -- fm_offspring -- fm_offspring_r;}
+    fm_marriage -- fm_offspring;
+    node [shape=box];
+    {rank=same; faddir -- fm_marriage -- muddir;}
+    fm_offspring_l -- offspring_a;
+    fm_offspring_l -- offspring_b;
+    fm_offspring_r -- offspring_c;
+    fm_offspring_r -- offspring_d;
+}
+
