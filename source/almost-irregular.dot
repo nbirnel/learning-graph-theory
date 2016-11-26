@@ -1,35 +1,33 @@
 strict graph  {
     node [shape=circle, width=0.1, height=0.1; label=""]
-	graph [style=filled, color=white];
+	graph [style=filled, color=blue, color=white];
     subgraph cluster_g2a {
         
-        node[color=red]
         label="2a"
-        g2a1 [style=filled];
-        g2a2 [style=filled];
+        g2a1 [style=filled, color=blue];
+        g2a2 [style=filled, color=blue];
         g2a1 -- g2a2;
     }
     subgraph cluster_g2b {
-        node[color=blue]
         label="2b"
-        g2b1 [style=filled];
-        g2b2 [style=filled];
+        g2b1 [style=filled, color=blue];
+        g2b2 [style=filled, color=blue];
     }
     subgraph cluster_g3a {
         label="3a"
-        g3a1 [style=filled];
-        g3a2 [style=filled];
-        g3a3;
+        g3a1 [style=filled, color=blue];
+        g3a2 [style=filled, color=blue];
         g3a1 -- g3a2;
+        g3a3;
+        {rank=same; g3a1, g3a3;}
     }
     subgraph cluster_g3b {
         label="3b"
-        g3b1 [style=filled];
-        g3b2 [style=filled];
+        g3b1 [style=filled, color=blue];
+        g3b2 [style=filled, color=blue];
         g3b3;
         g3b1 -- g3b3;
         g3b3 -- g3b2;
+        {rank=same; g3b1, g3b3;}
     }
-    {rank=same; g2a1, g2b1, g3a1, g3a3, g3b1, g3b3}
-    {rank=same; g2a2, g2b2, g3a2, g3b2}
 }

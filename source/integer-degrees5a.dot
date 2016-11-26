@@ -24,6 +24,7 @@ strict graph  {
         g3_4_c -- g3_4_d;
         g3_4_c -- g3_4_e;
         g3_4_d -- g3_4_e;
+        { rank = same; g3_4_a, g3_4_b; }
     }
     subgraph cluster_g2_4 {
         label="2,4"
@@ -42,14 +43,7 @@ strict graph  {
         g1_4_a -- g1_4_e;
     }
     {rank = same;
-        g4_a;
-        g3_4_a, g3_4_b;
-        g2_4_a;
-        g1_4_a
-    }
-    {rank = same;
         g4_b, g4_e;
-        g3_4_c;
         g2_4_b, g2_4_c;
         g2_4_b, g2_4_c
     }
