@@ -1,9 +1,17 @@
 strict graph  {
-	graph [label=ft];
+    Blaine -- Bellingham [label="WhatcomT 70X"];
+    Bellingham -- "Mount Vernon" [label="SkagitT 80X"];
+    "Mount Vernon" -- Everett [label="SkagitT 90X"];
+    "Mount Vernon" -- Anacortes [label="SkagitT 40X"];
+    Anacortes -- "Oak Harbor" [label="IslandT 411W"];
+    Stanwood -- Arlington [label="CommunityT 240"];
+    Arlington -- Everett [label="CommunityT 227"];
+    {rank=same; "Neah Bay", Forks}
     "Neah Bay" -- Forks [label="JeffersonT 10"];
     "Port Angeles" -- Forks [label="JeffersonT 14"];
     "Port Angeles" -- Sequim [label="JeffersonT 30"];
     Sequim -- "Port Townsend" [label="JeffersonT 8"];
+    #{rank=same; Brinnon, Poulsbo}
     "Port Townsend" -- Brinnon [label="JeffersonT 1"];
     "Port Townsend" -- Poulsbo [label="JeffersonT 7"];
     #Poulsbo -- Silverdale [label="KitsapT 32"];
@@ -17,11 +25,13 @@ strict graph  {
 	#Seattle -- Issaquah [label="ST 554"];
     Everett -- Bellevue [label="ST 532"];
 	Bremerton -- Seattle [label="WSF Seattle-Bremerton"];
+    #Brinnon -- Shelton [label="MTA 8"];
+    Shelton -- Olympia [label="MTA 6/6X"];
 	Tacoma -- Olympia [label="IT 605"];
 	Bremerton -- "Port Orchard" [label="KitsapT Foot Ferry"];
+    {rank=same; Humptulips, Tacoma;}
 	"Port Orchard" -- Purdy [label="KitsapT Purdy Connection"];
     Purdy -- Tacoma [label="PierceT 100"];
-	Portland;
     Vancouver -- Portland [label="CTran 105"];
     Longview -- Vancouver [label="CTran 105"];
     #"St Helens" -- Portland [label="CCRider 1"];
@@ -38,8 +48,6 @@ strict graph  {
     McMinnville -- "Grande Ronde" [label="Yamhill 22/24S"];
     McMinnville -- Salem [label="Yamhill 11"];
     McMinnville -- Tigard [label="Yamhill 44/99w"];
-	"Cannon Beach";
-	Astoria;
 	Astoria -- Portland [label="SETD Lower Columbia"];
 	"Amanda Park" -- Humptulips [label="GHT 60"];
 	Humptulips -- Aberdeen [label="GHT 60"];
@@ -53,10 +61,8 @@ strict graph  {
 	#Aberdeen -- Centralia [label="GHT 90"];
 	"Ocean Shores" -- Tahola [label="GHT 50"];
     "Ocean Shores" -- Aberdeen [label="GHT 50"];
-    Brinnon -- Shelton [label="MTA 8"];
-    Shelton -- Olympia [label="MTA 6/6X"];
-    Shelton -- Belfair [label="MTA 1/2"];
-    Bremerton -- Belfair [label="MTA 3/3X"];
+    #Shelton -- Belfair [label="MTA 1/2"];
+    #Bremerton -- Belfair [label="MTA 3/3X"];
     #Shelton -- "Lake Cushman" [label="MTA 11"];
     Astoria -- "Cannon Beach" [label="SETD 101"];
     #Seaside -- Manzanita [label="TillCo 20"];
@@ -79,10 +85,9 @@ strict graph  {
     #"Port Orford" -- "Smith River"  [label="CurryPT CoastalX"];
     #"Smith River" -- "Crescent City" [label="RedwoodCoastalT 20"];
     #"Crescent City" -- "Klamath" [label="RedwoodCoastalT 10"];
-    {rank=same; "Neah Bay", "Port Angeles", Sequim, "Port Townsend"}
-    {rank=same; Forks, Everett}
-    {rank=same; Brinnon, Poulsbo}
+    {rank=same; "Port Angeles", Sequim, "Port Townsend", Everett}
+    #{rank=same; Forks, Everett}
     {rank=same; Bremerton, Seattle, Bellevue }
-    {rank=same; Tahola, Shelton, Tacoma}
+    {rank=same; Tahola, Tacoma}
     {rank=same; "Ocean Shores", Aberdeen, Olympia}
 }
