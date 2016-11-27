@@ -1,0 +1,11 @@
+strict graph  {
+    "Sergey Brin"  [color=red];
+    "Paul Otellini" [color=red];
+    {rank=same; "Sergey Brin", "Paul Otellini"};
+    Google [color=blue];
+    Intel [color=blue];
+    {rank = same; Google, Intel}
+    "Sergey Brin" -- Google;
+    "Paul Otellini" -- Google;
+    "Paul Otellini" -- Intel;
+}
