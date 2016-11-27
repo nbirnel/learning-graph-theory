@@ -30,4 +30,28 @@ strict graph  {
         g3b3 -- g3b2;
         {rank=same; g3b1, g3b3;}
     }
+    subgraph cluster_g4a {
+        label="4a"
+        g4a1 [style=filled, color=blue];
+        g4a2 [style=filled, color=blue];
+        g4a3;
+        g4a4;
+        g4a1 -- g4a4;
+        g4a2 -- g4a4;
+        {rank=same; g4a1, g4a3;}
+        {rank=same; g4a2, g4a4;}
+    }
+    subgraph cluster_g4b {
+        label="4b"
+        g4b1 [style=filled, color=blue];
+        g4b2 [style=filled, color=blue];
+        g4b3;
+        g4b4;
+        g4b1 -- g4b3;
+        g4b1 -- g4b2;
+        g4b2 -- g4b3;
+        g4b3 -- g4b4;
+        {rank=same; g4b1, g4b3;}
+        {rank=same; g4b2, g4b4;}
+    }
 }
