@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# dpkg -L graphviz | grep man./
+
+one_deg() {
+    iters=$1
+    flag=$2
+    name=$3
+    for iter in $(seq $iters); do
+        gvgen -N "$name" $flag $iter | dot  >"$name-$iter".dot
+    done
+}
+        
+two_deg() {
+    iters_a=$1
+    iters_b=$2
+    flag=$3
+    name=$4
+	fold=$5
+    for a in $(seq $iters_a); do
+        for b in $(seq $iters_b); do
+            gvgen -N "$name" $flag $fold$a,$b | dot >"$name-$a-$b.dot"
+        done
+    done
+}
+
+four_deg() {
+    iters_a=$1
+    iters_b=$2
+    iters_c=$3
+    iters_d=$4
+    flag=$5
+    name=$6
+    for a in $(seq $iters_a); do
+        for b in $(seq $iters_b); do
+        	for c in $(seq $iters_c); do
+        		for d in $(seq $iters_d); do
+            		gvgen -N "$name" $flag $a,$b,$c,$d | dot >"$name-$a-$b-$c-$d.dot"
+                done
+            done
+        done
+    done
+}
+
+
+one_deg "3 7" -c cycle
+two_deg 5 "2 5" -C cylinder
+two_deg 5 "2 5" -g grid
+two_deg 5 "2 5" -g folded_grid f
+two_deg 5 "2 5" -G partial_grid
+two_deg 5 "2 5" -G folded_partial_grid f
+one_deg 5 -h hypercube
+one_deg 5 -k complete
+two_deg 5 "2 5" -b complete_bipartite
+two_deg 5 "2 5" -B ball
+one_deg 5 -m triangular_mesh
+two_deg "2 5" "2 5" -M Moebius_strip
+#two_deg "10 50" "2 70" -r random
+#one_deg 20 "-i 6 -R" random_tree
+one_deg 5 -s star
+one_deg 5 -S two_D_sierpinski
+two_deg 5 "2 3" -S nD_sierpinkski
+one_deg 5 -t binary_tree
+two_deg 5 "2 5" -t n_ary_tree
+two_deg 5 5 -T torus
+four_deg 5 5 3 3 -T twisted_torus
+one_deg "4 8" -w wheel
