@@ -111,3 +111,15 @@ of order `n + 1`, the degrees of whose vertices are precisely those integers.
 
 .. graphviz:: integer-degrees5b.dot
 
+A Diversion
+===========
+
+`Topics in Mathematics` (Merkes 1975), chapter 4: 
+*A Pictorial Applied Mathematics*
+
+*Equivalent* graphs -- what Benjamin calls *isomorphic*.
+
+Divisors as directed graphs:
+
+.. graphviz:: divisors.dot
+

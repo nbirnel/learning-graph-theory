@@ -1,0 +1,106 @@
+strict digraph  {
+    node [shape=circle, width=0.1, height=0.1]
+	graph [style=filled, color=white, label="\n"];
+    subgraph cluster_g12 {
+        a1 [label=1]
+        a2 [label=2]
+        a3 [label=3]
+        a4 [label=4]
+        a6 [label=6]
+        a12 [label=12]
+        a1 -> a2;
+        a1 -> a3;
+        a2 -> a4
+        a2 -> a6;
+        a3 -> a6;
+        a4 -> a12;
+        a6 -> a12;
+    }
+    subgraph cluster_g16 {
+        b1 [label=1]
+        b2 [label=2]
+        b4 [label=4]
+        b8 [label=8]
+        b16 [label=16]
+        b1 -> b2;
+        b2 -> b4;
+        b4 -> b8;
+        b8 -> b16;
+    }
+    subgraph cluster_g18 {
+        c1 [label=1]
+        c2 [label=2]
+        c3 [label=3]
+        c6 [label=6]
+        c9 [label=9]
+        c18 [label=18]
+        c1 -> c2;
+        c1 -> c3;
+        c2 -> c6
+        c3 -> c6;
+        c3 -> c9;
+        c6 -> c18;
+        c9 -> c18;
+    }
+    subgraph cluster_g24 {
+        d1 [label=1]
+        d2 [label=2]
+        d3 [label=3]
+        d4 [label=4]
+        d6 [label=6]
+        d8 [label=8]
+        d12 [label=12]
+        d24 [label=24]
+        d1 -> d2;
+        d1 -> d3;
+        d2 -> d4
+        d2 -> d6;
+        d3 -> d6;
+        d4 -> d8;
+        d4 -> d12;
+        d6 -> d12;
+        d8 -> d24;
+        d12 -> d24;
+    }
+    subgraph cluster_g30 {
+        e1 [label=1]
+        e2 [label=2]
+        e3 [label=3]
+        e5 [label=5]
+        e6 [label=6]
+        e10 [label=10]
+        e15 [label=15]
+        e30 [label=30]
+        e1 -> e2;
+        e1 -> e3;
+        e1 -> e5;
+        e2 -> e6;
+        e3 -> e6;
+        e3 -> e15;
+        e5 -> e10;
+        e5 -> e15;
+        e6 -> e30;
+        e10 -> e30;
+        e15 -> e30;
+    }
+    subgraph cluster_g40 {
+        f1 [label=1]
+        f2 [label=2]
+        f4 [label=4]
+        f5 [label=5]
+        f8 [label=8]
+        f10 [label=10]
+        f20 [label=20]
+        f40 [label=40]
+        f1 -> f2;
+        f1 -> f5;
+        f2 -> f10;
+        f2 -> f4;
+        f4 -> f20;
+        f4 -> f8
+        f5 -> f10;
+        f8 -> f40;
+        f10 -> f20;
+        f20 -> f40;
+    }
+}
