@@ -123,3 +123,14 @@ Divisors as directed graphs:
 
 .. graphviz:: divisors.dot
 
+A woman has a wolf, a sheep, and a cabbage;
+and a canoe which can hold him and any two of her possessions. 
+How does she cross the river?
+
+Using a graph as a decision tree to help us figure this out:
+
+.. graphviz:: wolf-sheep-cabbage.dot
+
+What is the fairest apportioning of limited resources?
+
+.. graphviz:: tom-dick-harry.dot
